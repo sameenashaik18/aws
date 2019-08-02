@@ -1,0 +1,56 @@
+AWS S3:
+---------------->>>
+
+Amazon Simple Storage Service (Amazon S3) is storage for the internet. 
+You can use Amazon S3 to store and retrieve any amount of data at any time, from anywhere on the web. 
+You can accomplish these tasks using the simple and intuitive web interface of the AWS Management Console.
+
+
+1.Create an Amazon S3 Bucket
+
+  1.First, you need to create an Amazon S3 bucket where you will store your objects.
+
+  2.Sign in to the preview version of the AWS Management Console.
+
+      Under Storage & Content Delivery, choose S3 to open the Amazon S3 console.
+	  
+  3.From the Amazon S3 console dashboard, choose Create Bucket.
+
+  4.In Create a Bucket, type a bucket name in Bucket Name.
+
+  5.The bucket name you choose must be globally unique across all existing bucket names in Amazon S3 
+
+  6.In Region, choose Oregon.
+
+     Choose Create.
+
+       When Amazon S3 successfully creates your bucket, the console displays your empty bucket in the Buckets pane.
+	   
+2.Upload a File to Your Amazon S3 Bucket
+
+    Now that you've created a bucket, you're ready to add an object to it. An object can be any kind of file: a document, a photo, a video, a music file, or other file type.
+
+      1.In the Amazon S3 console, choose the bucket where you want to upload an object, choose Upload, and then choose Add Files.	  
+	  
+	  
+	 2.In the file selection dialog box, find the file that you want to upload, choose it, choose Open, and then choose Start Upload.
+
+        You can watch the progress of the upload in the Transfer pane.
+		
+3. Retrieve a File from Your Amazon S3 Bucket
+
+      Now that you've added an object to a bucket, you can open and view it in a browser. You can also download the object to your local computer.
+
+	1.In the Amazon S3 console, choose your S3 bucket, choose the file that you want to open or download, choose Actions, and then choose Open or Download.
+	
+	2.If you are downloading an object, specify where you want to save it.
+
+        The procedure for saving the object depends on the browser and operating system that you are using.
+		
+4. Delete a File From Your Amazon S3 Bucket
+
+    If you no longer need to store the file you've uploaded to your Amazon S3 bucket, you can delete it.
+
+    Within your S3 bucket, select the file that you want to delete, choose Actions, and then choose Delete.
+
+    In the confirmation message, choose OK.
