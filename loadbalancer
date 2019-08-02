@@ -1,0 +1,50 @@
+ECB
+=========================
+
+select two instances and start them
+
+In security group if you selected All traffic and anywhere no need changes.
+
+If security group have only SSH then add HTTP port address 80 and save it
+
+Now open the both instances
+1. 
+1.Install the httpd 
+
+
+    [ec2-user@ip-172-31-5-90 ~]$ sudo yum install httpd
+
+ 
+2.Now start the httpd service
+
+    [ec2-user@ip-172-31-5-90 ~]$ sudo service httpd start
+
+ 
+3.Now check the status of the httpd
+
+    [ec2-user@ip-172-31-5-90 ~]$ sudo service httpd status
+
+
+4.to enable the httpd in booting process
+    
+[ec2-user@ip-172-31-5-90 ~]$ sudo systemctl enable httpd
+
+
+5. Create a html file 
+    
+[ec2-user@ip-172-31-5-90 ~]$ sudo vi /var/www/html/index.html
+
+
+6. Restart the httpd service
+
+    [ec2-user@ip-172-31-5-90 ~]$ sudo service httpd restart
+
+
+ Copy the server1 ip address and hit in the browser. here we can see html page
+
+Repeat the same process in server2 
+ 
+
+In EC2 dashboard select loadbalancer====> select classic load balancer ====> Load balancer name ===> Enable advanced VPC configuration ===> select the zones ==> create security group===> add ec2 instance select the no.of server ===> Tag name (finish)
+Loadbalancers ===> 
+ copy the DNS name: myelb-1823333732.us-east-1.elb.amazonaws.com and paste in browser.
