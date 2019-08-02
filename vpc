@@ -1,0 +1,10 @@
+1.create a vpc name it as Wipro-VPC,ip range-10.50.0.0/16.Enable DNS Hostnames on vpc
+2.Create subnets as following and enable auto assign Ip.
+  Webserver - 10.50.1.0/24 -us-east-1a.
+  Appserver - 10.50.2.0/24 -us-east-1b
+  Dbserver  - 10.50.3.0/24 -us-eact-1c
+ 
+3.Create "Internetgateway" and attach to VPC
+4.Use dfault routing table and add subnet to it.
+5.Configure route tables IGW so that VMs can send the traffic outside the VPC
+6.Deploy VMs,one is us-east-1a and other is us-east-1c and check communication.
