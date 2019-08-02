@@ -1,0 +1,34 @@
+  vpc peering
+===============
+
+
+1.Select the VPC’s  to be peered 
+   
+    (GO TO VPC OPTION IN YOUR AWS ACCOUNT, THERE YOU WILL FIND “PEERING CONNECTION” OPTION ON LEFT SIDE. IN THAT CLICK ON “CREATE VPC PEERING CONNECTION” BUTTON)
+2.Review the peering connection infomation
+   
+    (CONFIRM THE DETAILS OF YOUR VPC AND THE VPC TO BE PEERED WITH.)
+3. Accept the VPC peering request
+    
+     (ACCEPT THE REQUEST, IF YOU ARE DOING PEERING WITH OTHER ACCOUNT THEN THE OTHER ACCOUNT WILL RECEIVE THE REQUISITION FOR PEERING.)
+4. Review the request before accepting it as you won’t be able to revert back once accepted!
+
+    (CHECK AND CONFIRM THE INFORMATION AND THEN ACCEPT THE REQUEST)
+5. Edit the route tables of both VPC’s (IMP)
+
+    (YOU’LL HAVE TO ADD NETWORK RANGE WITH CIDR OF THE OTHER VPC INTO BOTH VPC’S ROUTE TABLE BY SELECTING THE APPROPRIATE VPC PEERING ID IN TARGET FIELD.)
+6. Once done check the security group to make sure you have SSH port open for instances in both VPC’s.
+
+     Try to perform SSH to the instance in other peered VPC, It should work!
+
+         $ssh -i "xyz.pem" ec2-user@10.0.0.2
+
+Note: If it doesn’t work, please check your route table entries.
+
+ -----If your trying to access an RDS instance than make sure you enable DNS resolution. You can do that by editing source Peering connection.
+
+    -----Select VPC peering connection( the one which you created first) -> go to edit DNS settings option
+
+
+-----Make sure you do this on the Peering connection which you create a first not the one which you sent request to, otherwise it won’t work.
+
